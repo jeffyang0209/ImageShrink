@@ -11,9 +11,25 @@ namespace ImageShrink
 {
     class Program
     {
+        /// <summary>
+        /// 資料夾路徑
+        /// </summary>
+        private static string folderPath = @"C:\Users\Jeff\Desktop\Games";
+
+        /// <summary>
+        /// 縮圖的檔案名稱
+        /// </summary>
+        private static string reSizeImgName = "_xs";
+
+        /// <summary>
+        /// 副檔名
+        /// </summary>
+        private static string filenameExtension = ".jpg";
+
+
         static void Main(string[] args)
         {
-            GO(@"C:\Users\Jeff\Desktop\Games");
+            GO(folderPath);
         }
 
         public static void GO(string path)
@@ -22,13 +38,13 @@ namespace ImageShrink
             // 處理所有檔案
             foreach (var file in files)
             {
-                if (file.Extension == ".jpg" && file.FullName.IndexOf("_xs") == -1)
+                if (file.Extension == filenameExtension && file.FullName.IndexOf(reSizeImgName) == -1)
                 {
                     if (file.Name[0] != '.')
                     {
                         var res = ToBinaryByFileStream(file.FullName, 10);
 
-                        File.WriteAllBytes(file.FullName.Insert(file.FullName.Length - 4, "_xs"), res);
+                        File.WriteAllBytes(file.FullName.Insert(file.FullName.Length - 4, reSizeImgName), res);
 
                         //res = ToBinaryByFileStream(file.FullName, 1);
 
