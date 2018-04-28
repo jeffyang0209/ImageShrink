@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp5
+namespace ImageShrink
 {
     class Program
     {
@@ -46,6 +46,12 @@ namespace ConsoleApp5
             }
         }
 
+        /// <summary>
+        /// 縮圖
+        /// </summary>
+        /// <param name="imageFile">圖片路徑</param>
+        /// <param name="size">縮圖倍數</param>
+        /// <returns></returns>
         private static byte[] ToBinaryByFileStream(string imageFile, int size)
         {
             using (FileStream fs = File.OpenRead(imageFile))

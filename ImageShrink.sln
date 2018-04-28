@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageShrink", "ConsoleApp5\ImageShrink.csproj", "{E516DFE9-2E8B-46FC-85A5-44143F39D418}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageShrink", "ImageShrink\ImageShrink.csproj", "{E516DFE9-2E8B-46FC-85A5-44143F39D418}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

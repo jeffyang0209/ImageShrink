@@ -5,7 +5,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Text;
 
-namespace ConsoleApp5
+namespace ImageShrink
 {
     public class ImageShrink:IDisposable
     {
